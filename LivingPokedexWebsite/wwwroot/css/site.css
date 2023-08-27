@@ -1,0 +1,64 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+#add-poke-btn {
+    font-family:Verdana;
+    background-color: forestgreen;
+    border-radius:25px;
+    float:inline-end;
+}
+
+#add-poke-btn:hover {
+    background-color:lightgreen;
+    color:black;
+}
+
+
+.title-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.title-header .title-item-1 {
+   color: black;
+   font-family: Verdana;
+}
+
+.homepage-welcometext {
+    display:flex;
+    justify-content:center;
+}
+
+.homepage-nav-btns {
+    display:flex;
+    
+    flex-direction:column;
+    justify-content:space-around;
+}
+
+#index-page-btn {
+    background-color:coral;
+    color:black;
+    font-size:larger;
+    margin-top:50px;
+    margin-left:300px;
+    margin-right:300px;
+    padding:5px;
+}

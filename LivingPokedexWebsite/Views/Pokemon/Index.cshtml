@@ -1,0 +1,39 @@
+﻿@model List<LivingPokedexWebsite.Models.Domain.Pokemon>
+
+@{
+}
+<div class="title-header">
+    <div class="title-item-1"><h1 class="title">Pokemon Dex</h1></div>
+
+    <div class="title-item-2"><a asp-action="Add" asp-controller="Pokemon" class="btn btn-primary" id="add-poke-btn">Add Pokemon</a></div>
+</div>
+
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>PokeDex Number</th>
+            <th>Name</th>
+            <th>Form</th>
+            <th> </th>
+            <th>Found</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var pokemon in Model)
+        {
+            <tr>
+                <td>@pokemon.PokeDexNum</td>
+                <td>@pokemon.PokemonName</td>
+                <td>@pokemon.FormName</td>
+                <td><a href="Pokemon/View/@pokemon.Id">View</a></td>
+                <td>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="true" id="flexCheckDefault"
+                                name="formchecked" asp-controller="Pokemon" asp-action="Checked">
+                    </div>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

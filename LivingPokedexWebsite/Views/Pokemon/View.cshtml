@@ -1,0 +1,29 @@
+﻿@model LivingPokedexWebsite.Models.UpdatePokemonViewModel
+
+@{
+}
+
+<h1>Edit Pokemon</h1>
+<form method="post" action="View" class="mt-5">
+    <div class="mb-3">
+        <label for="" class="form-label">Id</label>
+        <input type="text" class="form-control" asp-for="Id" readonly>
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Pokemon Dex Number</label>
+        <input type="number" class="form-control" asp-for="PokeDexNum">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Pokemon Name</label>
+        <input type="text" class="form-control" asp-for="PokemonName">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Pokemon Form</label>
+        <input type="text" class="form-control" asp-for="FormName">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+
+    <button type="submit" class="btn btn-danger"
+        asp-action="Delete"
+        asp-controller="Pokemon">Delete</button>
+</form>
